@@ -84,7 +84,47 @@ namespace InterfazG
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            if (txtuser.Text != "USUARIO")
+            {
+                if (txtpass.Text != "CONTRASEÑA")
+                {
+                    ModeloUsuario usuario = new ModeloUsuario();
+                    var validLogin = usuario.LoginUser(txtuser.Text, txtpass.Text);
+                    if (validLogin == true)
+                    {
+                        FormPrincipal mainMenu = new FormPrincipal();
+                        mainMenu.Show();
+                        mainMenu.FormClosed += logout;
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MsgError("Usuario o contraseña incorrectos. \n   Por favor intente de nuevo.");
+                        txtpass.Text = "Contraseña";
+                        txtuser.Focus();
+                    }     
+                }
+                else MsgError("Por favor ingrese su contraseña");
+            }
+            else MsgError("Por favor ingrese su usuario");
+        }
+        private void MsgError(String msg)
+        {
+            lblErrorMessage.Text = " " + msg;
+            lblErrorMessage.Visible = true;
+        }
+        private void txtuser_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+        private void logout(object sender, FormClosedEventArgs e)
+        {
+            txtpass.Text = "CONTRASEÑA";
+            txtpass.UseSystemPasswordChar = false;
+            txtuser.Text = "USUARIO";
+            lblErrorMessage.Visible = false;
+            this.Show();
+            //txtuser.Focus();
         }
     }
 }
