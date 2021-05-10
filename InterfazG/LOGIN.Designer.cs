@@ -161,11 +161,13 @@ namespace InterfazG
             this.lblErrorMessage.AutoSize = true;
             this.lblErrorMessage.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblErrorMessage.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblErrorMessage.Image = ((System.Drawing.Image)(resources.GetObject("lblErrorMessage.Image")));
+            this.lblErrorMessage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblErrorMessage.Location = new System.Drawing.Point(342, 182);
             this.lblErrorMessage.Name = "lblErrorMessage";
-            this.lblErrorMessage.Size = new System.Drawing.Size(126, 18);
+            this.lblErrorMessage.Size = new System.Drawing.Size(156, 18);
             this.lblErrorMessage.TabIndex = 8;
-            this.lblErrorMessage.Text = "Mensaje Erroneo";
+            this.lblErrorMessage.Text = "      Mensaje Erroneo";
             this.lblErrorMessage.Visible = false;
             // 
             // LOGIN

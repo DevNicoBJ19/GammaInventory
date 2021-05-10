@@ -66,7 +66,7 @@ namespace InterfazG
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.DarkSalmon;
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.MenuVertical.Controls.Add(this.pictureBox2);
             this.MenuVertical.Controls.Add(this.panel1);
             this.MenuVertical.Controls.Add(this.panel2);
@@ -74,6 +74,7 @@ namespace InterfazG
             this.MenuVertical.Controls.Add(this.button2);
             this.MenuVertical.Controls.Add(this.btnprod);
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MenuVertical.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(261, 650);
@@ -85,14 +86,14 @@ namespace InterfazG
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 23);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(261, 86);
+            this.pictureBox2.Size = new System.Drawing.Size(255, 86);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(80)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label3);
@@ -120,7 +121,7 @@ namespace InterfazG
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(11, 26);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 38);
+            this.pictureBox3.Size = new System.Drawing.Size(45, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
@@ -149,7 +150,7 @@ namespace InterfazG
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Coral;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(69)))), ((int)(((byte)(54)))));
             this.panel2.Controls.Add(this.btnCerrarSesion);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(0, 561);
@@ -160,14 +161,14 @@ namespace InterfazG
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(72, 25);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(62, 0);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(134, 39);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(199, 89);
             this.btnCerrarSesion.TabIndex = 6;
             this.btnCerrarSesion.Text = "Cerrar sesion";
             this.btnCerrarSesion.UseVisualStyleBackColor = true;
@@ -196,7 +197,7 @@ namespace InterfazG
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 320);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(245, 86);
+            this.button3.Size = new System.Drawing.Size(261, 104);
             this.button3.TabIndex = 2;
             this.button3.Text = "Clientes";
             this.button3.UseVisualStyleBackColor = true;
@@ -211,9 +212,9 @@ namespace InterfazG
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 412);
+            this.button2.Location = new System.Drawing.Point(0, 430);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(237, 84);
+            this.button2.Size = new System.Drawing.Size(261, 105);
             this.button2.TabIndex = 1;
             this.button2.Text = "    Proveedores";
             this.button2.UseVisualStyleBackColor = true;
@@ -228,9 +229,9 @@ namespace InterfazG
             this.btnprod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnprod.Image = ((System.Drawing.Image)(resources.GetObject("btnprod.Image")));
             this.btnprod.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnprod.Location = new System.Drawing.Point(0, 231);
+            this.btnprod.Location = new System.Drawing.Point(0, 221);
             this.btnprod.Name = "btnprod";
-            this.btnprod.Size = new System.Drawing.Size(255, 83);
+            this.btnprod.Size = new System.Drawing.Size(261, 93);
             this.btnprod.TabIndex = 0;
             this.btnprod.Text = "Productos";
             this.btnprod.UseVisualStyleBackColor = true;
@@ -238,6 +239,7 @@ namespace InterfazG
             // 
             // BarraTitulo
             // 
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(26)))), ((int)(((byte)(29)))));
             this.BarraTitulo.Controls.Add(this.iconomaximizar);
             this.BarraTitulo.Controls.Add(this.iconorestaurar);
             this.BarraTitulo.Controls.Add(this.btnslide);
@@ -317,6 +319,7 @@ namespace InterfazG
             // 
             // panelContenedor
             // 
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(230)))));
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(261, 50);
             this.panelContenedor.Name = "panelContenedor";

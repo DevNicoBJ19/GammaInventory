@@ -99,14 +99,14 @@ namespace InterfazG
                     }
                     else
                     {
-                        MsgError("Usuario o contraseña incorrectos. \n   Por favor intente de nuevo.");
+                        MsgError("     Usuario o contraseña incorrectos.  \n        Por favor intente de nuevo.");
                         txtpass.Text = "Contraseña";
                         txtuser.Focus();
                     }     
                 }
-                else MsgError("Por favor ingrese su contraseña");
+                else MsgError("     Por favor ingrese su contraseña");
             }
-            else MsgError("Por favor ingrese su usuario");
+            else MsgError("     Por favor ingrese su usuario");
         }
         private void MsgError(String msg)
         {
