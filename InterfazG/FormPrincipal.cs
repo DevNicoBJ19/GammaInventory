@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using CapaComun.Cache;
 
 namespace InterfazG
 {
@@ -108,6 +110,24 @@ namespace InterfazG
                 this.Close();
         }
 
+       
+        
+        private void LoadUserData()
+        {
+            lblName.Text = CacheLoginUsuario.FirstName + ", " + CacheLoginUsuario.LastName;
+            lblEmail.Text = CacheLoginUsuario.Email;
+            lblPosition.Text = CacheLoginUsuario.Position;
+
+        }
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            LoadUserData();
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -116,6 +136,12 @@ namespace InterfazG
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void fechahora_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblfecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 using Dominio;
+using CapaComun.Cache;
 
 namespace InterfazG
 {
@@ -92,7 +94,11 @@ namespace InterfazG
                     var validLogin = usuario.LoginUser(txtuser.Text, txtpass.Text);
                     if (validLogin == true)
                     {
+                        this.Hide();
+                        FormBienvenida bienvenida = new FormBienvenida();
+                        bienvenida.ShowDialog();
                         FormPrincipal mainMenu = new FormPrincipal();
+                        
                         mainMenu.Show();
                         mainMenu.FormClosed += logout;
                         this.Hide();
@@ -124,7 +130,6 @@ namespace InterfazG
             txtuser.Text = "USUARIO";
             lblErrorMessage.Visible = false;
             this.Show();
-            //txtuser.Focus();
         }
     }
 }
