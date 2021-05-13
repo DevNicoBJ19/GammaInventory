@@ -138,10 +138,33 @@ namespace InterfazG
 
         }
 
-        private void fechahora_Tick(object sender, EventArgs e)
+        
+        private void AbrirFormHija (object formhija)
         {
-            lblhora.Text = DateTime.Now.ToString("hh:mm:ss");
-            lblfecha.Text = DateTime.Now.ToLongDateString();
+            
         }
+
+        private void lblhora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            abrirFormHija(new Inicio());
+        }
+        private void abrirFormHija(object formhija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+
+        }
+
     }
 }

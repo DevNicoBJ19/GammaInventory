@@ -29,7 +29,6 @@ namespace InterfazG
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -52,10 +51,7 @@ namespace InterfazG
             this.iconocerrar = new System.Windows.Forms.PictureBox();
             this.iconominimizar = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.lblfecha = new System.Windows.Forms.Label();
-            this.lblhora = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.fechahora = new System.Windows.Forms.Timer(this.components);
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -110,6 +106,7 @@ namespace InterfazG
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel1
             // 
@@ -339,8 +336,6 @@ namespace InterfazG
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(230)))));
-            this.panelContenedor.Controls.Add(this.lblfecha);
-            this.panelContenedor.Controls.Add(this.lblhora);
             this.panelContenedor.Controls.Add(this.pictureBox4);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(261, 50);
@@ -348,41 +343,15 @@ namespace InterfazG
             this.panelContenedor.Size = new System.Drawing.Size(1039, 600);
             this.panelContenedor.TabIndex = 2;
             // 
-            // lblfecha
-            // 
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblfecha.Location = new System.Drawing.Point(216, 105);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(130, 54);
-            this.lblfecha.TabIndex = 2;
-            this.lblfecha.Text = "label2";
-            // 
-            // lblhora
-            // 
-            this.lblhora.AutoSize = true;
-            this.lblhora.Font = new System.Drawing.Font("Segoe UI Emoji", 55F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblhora.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblhora.Location = new System.Drawing.Point(323, 0);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(239, 99);
-            this.lblhora.TabIndex = 1;
-            this.lblhora.Text = "label1";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(312, 171);
+            this.pictureBox4.Location = new System.Drawing.Point(978, 523);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(351, 385);
+            this.pictureBox4.Size = new System.Drawing.Size(49, 65);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
-            // 
-            // fechahora
-            // 
-            this.fechahora.Enabled = true;
-            this.fechahora.Tick += new System.EventHandler(this.fechahora_Tick);
             // 
             // FormPrincipal
             // 
@@ -410,7 +379,6 @@ namespace InterfazG
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).EndInit();
             this.panelContenedor.ResumeLayout(false);
-            this.panelContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
@@ -441,9 +409,6 @@ namespace InterfazG
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblhora;
-        private System.Windows.Forms.Timer fechahora;
-        private System.Windows.Forms.Label lblfecha;
     }
 }
 
