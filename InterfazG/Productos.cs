@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Collections;
 using System.Linq;
+using DataAcceso;
 
 
 namespace InterfazG
@@ -33,28 +34,27 @@ namespace InterfazG
 
         private void Productos_Load(object sender, EventArgs e)
         {
+            ListarCategorias();
+            ListarMarcas();
+        }
+        private void ListarCategorias()
+        {
+            ClsProductos objProd = new ClsProductos();
+            cmbCategoria.DataSource = objProd.ListarCategorias();
+            cmbCategoria.DisplayMember = "CATEGORIAS";
+            cmbCategoria.ValueMember = "IDCATEG";
+        }
+        private void ListarMarcas()
+        {
+            ClsProductos objProd = new ClsProductos();
+            cmbMarca.DataSource = objProd.ListarMarcas();
+            cmbMarca.DisplayMember = "MARCA";
+            cmbMarca.ValueMember = "IDMARCA";
         }
 
-        private void btncrear_Click(object sender, EventArgs e)
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string m = (txtuser.Text);
-            objeto = new Pilas(m);
-            MessageBox.Show("Pila Creada");
-        }
 
-        private void btnguardar_Click(object sender, EventArgs e)
-        {
-            string n = (txtdato.Text);
-            objeto.push(n);
-            txtdato.Clear();
-            txtdato.Focus();
-        }
-
-        private void btnmostrar_Click(object sender, EventArgs e)
-        {
-            string n;
-            n = objeto.pop();
-            MessageBox.Show("Salio:" + n);
         }
     }
 }

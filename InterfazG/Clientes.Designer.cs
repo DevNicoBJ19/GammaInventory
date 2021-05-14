@@ -66,7 +66,7 @@ namespace InterfazG
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(774, 9);
+            this.label2.Location = new System.Drawing.Point(896, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(17, 19);
             this.label2.TabIndex = 4;
@@ -78,7 +78,7 @@ namespace InterfazG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(925, 503);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);

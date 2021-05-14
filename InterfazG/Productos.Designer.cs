@@ -31,41 +31,25 @@ namespace InterfazG
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Productos));
             this.label1 = new System.Windows.Forms.Label();
-            this.btncrear = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Label();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.txtdato = new System.Windows.Forms.TextBox();
-            this.btnguardar = new System.Windows.Forms.Button();
-            this.btnmostrar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.cmbMarca = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(398, 41);
+            this.label1.Location = new System.Drawing.Point(376, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "PRODUCTOS";
-            // 
-            // btncrear
-            // 
-            this.btncrear.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btncrear.FlatAppearance.BorderSize = 0;
-            this.btncrear.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btncrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncrear.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btncrear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btncrear.Image = ((System.Drawing.Image)(resources.GetObject("btncrear.Image")));
-            this.btncrear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncrear.Location = new System.Drawing.Point(165, 345);
-            this.btncrear.Name = "btncrear";
-            this.btncrear.Size = new System.Drawing.Size(261, 48);
-            this.btncrear.TabIndex = 1;
-            this.btncrear.Text = "CREAR";
-            this.btncrear.UseVisualStyleBackColor = false;
-            this.btncrear.Click += new System.EventHandler(this.btncrear_Click);
             // 
             // btnCerrar
             // 
@@ -81,82 +65,86 @@ namespace InterfazG
             this.btnCerrar.Text = "X";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // txtuser
+            // dataGridView1
             // 
-            this.txtuser.BackColor = System.Drawing.Color.White;
-            this.txtuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtuser.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtuser.Location = new System.Drawing.Point(285, 139);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(336, 27);
-            this.txtuser.TabIndex = 3;
-            this.txtuser.Text = "ingrese producto nuevo";
-            this.txtuser.TextChanged += new System.EventHandler(this.txtuser_TextChanged);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 40);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(534, 299);
+            this.dataGridView1.TabIndex = 8;
             // 
-            // txtdato
+            // cmbCategoria
             // 
-            this.txtdato.BackColor = System.Drawing.Color.White;
-            this.txtdato.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtdato.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtdato.Location = new System.Drawing.Point(285, 202);
-            this.txtdato.Name = "txtdato";
-            this.txtdato.Size = new System.Drawing.Size(336, 27);
-            this.txtdato.TabIndex = 5;
-            this.txtdato.Text = "Dato almacenado";
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(654, 61);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(242, 36);
+            this.cmbCategoria.TabIndex = 9;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
-            // btnguardar
+            // cmbMarca
             // 
-            this.btnguardar.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnguardar.FlatAppearance.BorderSize = 0;
-            this.btnguardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnguardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnguardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnguardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnguardar.Image = ((System.Drawing.Image)(resources.GetObject("btnguardar.Image")));
-            this.btnguardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnguardar.Location = new System.Drawing.Point(467, 345);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(261, 48);
-            this.btnguardar.TabIndex = 6;
-            this.btnguardar.Text = "GUARDAR";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            this.cmbMarca.FormattingEnabled = true;
+            this.cmbMarca.Location = new System.Drawing.Point(654, 133);
+            this.cmbMarca.Name = "cmbMarca";
+            this.cmbMarca.Size = new System.Drawing.Size(242, 36);
+            this.cmbMarca.TabIndex = 10;
             // 
-            // btnmostrar
+            // label2
             // 
-            this.btnmostrar.BackColor = System.Drawing.Color.DarkSalmon;
-            this.btnmostrar.FlatAppearance.BorderSize = 0;
-            this.btnmostrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnmostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmostrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnmostrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnmostrar.Image = ((System.Drawing.Image)(resources.GetObject("btnmostrar.Image")));
-            this.btnmostrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmostrar.Location = new System.Drawing.Point(314, 420);
-            this.btnmostrar.Name = "btnmostrar";
-            this.btnmostrar.Size = new System.Drawing.Size(261, 48);
-            this.btnmostrar.TabIndex = 7;
-            this.btnmostrar.Text = "MOSTRAR";
-            this.btnmostrar.UseVisualStyleBackColor = false;
-            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(552, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(97, 28);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Categoria";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(566, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 28);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Marca";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(69)))), ((int)(((byte)(54)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(340, 391);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(261, 48);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "CREAR";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 503);
-            this.Controls.Add(this.btnmostrar);
-            this.Controls.Add(this.btnguardar);
-            this.Controls.Add(this.txtdato);
-            this.Controls.Add(this.txtuser);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cmbMarca);
+            this.Controls.Add(this.cmbCategoria);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btncrear);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Productos";
             this.Text = "PRODUCTOS";
             this.Load += new System.EventHandler(this.Productos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,11 +153,12 @@ namespace InterfazG
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btncrear;
         private System.Windows.Forms.Label btnCerrar;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.TextBox txtdato;
-        private System.Windows.Forms.Button btnguardar;
-        private System.Windows.Forms.Button btnmostrar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.ComboBox cmbMarca;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }
