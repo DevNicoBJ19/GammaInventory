@@ -63,7 +63,7 @@ namespace InterfazG
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFecha.Location = new System.Drawing.Point(260, 135);
+            this.lblFecha.Location = new System.Drawing.Point(234, 136);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(130, 54);
             this.lblFecha.TabIndex = 2;

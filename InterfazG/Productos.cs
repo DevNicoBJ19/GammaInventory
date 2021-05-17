@@ -15,8 +15,8 @@ namespace InterfazG
     public partial class Productos : Form
 
     {
-        Pilas objeto = new Pilas();
-        
+
+        ClsProductos objProducto = new ClsProductos();
 
         public Productos()
         {
@@ -30,18 +30,20 @@ namespace InterfazG
 
         private void txtuser_TextChanged(object sender, EventArgs e)      
         {
+            
         }
 
         private void Productos_Load(object sender, EventArgs e)
         {
             ListarCategorias();
             ListarMarcas();
+            ListarProductos();
         }
         private void ListarCategorias()
         {
             ClsProductos objProd = new ClsProductos();
             cmbCategoria.DataSource = objProd.ListarCategorias();
-            cmbCategoria.DisplayMember = "CATEGORIAS";
+            cmbCategoria.DisplayMember = "CATEGORIA";
             cmbCategoria.ValueMember = "IDCATEG";
         }
         private void ListarMarcas()
@@ -55,6 +57,22 @@ namespace InterfazG
         private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            objProducto.InsertarProductos(
+                Convert.ToInt32(cmbCategoria.SelectedValue),
+                Convert.ToInt32(cmbMarca.SelectedValue),
+                txtdescripcion.Text,
+                Convert.ToDouble(txtprecio.Text));
+            MessageBox.Show("Dato almacenado correctamente");
+            ListarProductos();
+        }
+        private void ListarProductos()
+        {
+            ClsProductos objPro = new ClsProductos();
+            dataGridView1.DataSource = objPro.ListarProductos();
         }
     }
 }

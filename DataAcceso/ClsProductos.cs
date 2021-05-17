@@ -40,6 +40,31 @@ namespace DataAcceso
             Conexion.CerrarConexion();
             return Tabla;
         }
+        public void InsertarProductos(int idCategoria, int idMarca, string descripcion, double precio)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "AgregarProducto";
+            Comando.CommandType = CommandType.StoredProcedure;
+            Comando.Parameters.AddWithValue("@idcategoria", idCategoria);
+            Comando.Parameters.AddWithValue("@idmarca", idMarca);
+            Comando.Parameters.AddWithValue("@descrip", descripcion);
+            Comando.Parameters.AddWithValue("@prec", precio);
+            Comando.ExecuteNonQuery();
+            Comando.Parameters.Clear();
+            Conexion.CerrarConexion();
+        }
+        public DataTable ListarProductos()
+        {
+            DataTable Tabla = new DataTable();
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "ListarProductos";
+            Comando.CommandType = CommandType.StoredProcedure;
+            LeerFilas = Comando.ExecuteReader();
+            Tabla.Load(LeerFilas);
+            LeerFilas.Close();
+            Conexion.CerrarConexion();
+            return Tabla;
+        }
     }
 }
 

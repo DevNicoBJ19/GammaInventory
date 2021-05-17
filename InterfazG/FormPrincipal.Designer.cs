@@ -51,7 +51,6 @@ namespace InterfazG
             this.iconocerrar = new System.Windows.Forms.PictureBox();
             this.iconominimizar = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,8 +64,6 @@ namespace InterfazG
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).BeginInit();
-            this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -336,22 +333,11 @@ namespace InterfazG
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(230)))));
-            this.panelContenedor.Controls.Add(this.pictureBox4);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(261, 50);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(1039, 600);
             this.panelContenedor.TabIndex = 2;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(978, 523);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(49, 65);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
             // 
             // FormPrincipal
             // 
@@ -378,8 +364,6 @@ namespace InterfazG
             ((System.ComponentModel.ISupportInitialize)(this.btnslide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconocerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconominimizar)).EndInit();
-            this.panelContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,7 +387,6 @@ namespace InterfazG
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Label lblEmail;
