@@ -19,13 +19,17 @@ namespace Dominio
             tabla = objetoDA.Mostrar();
             return tabla;
         }
-        public void InsertarClie (string nom, string nit, string dir, string ciu, double tel)
-           {
-            objetoDA.Insertar(nom, nit, dir, ciu, Convert.ToDouble(tel));
-           }
-            
-
+        public void InsertarClie(string nombre, string nit, string direccion, string ciudad, string telefono)
+        {
+            objetoDA.Insertar(nombre, nit, direccion, ciudad, telefono);
         }
+
+        public void EditarClie(string nombre, string nit, string direccion, string ciudad, string telefono, string id)
+        {
+            objetoDA.Editar(nombre, nit, direccion, ciudad, telefono, Convert.ToInt32(id));
+        }
+
+    }
     }
 
     

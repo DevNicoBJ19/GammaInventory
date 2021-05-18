@@ -17,7 +17,7 @@ namespace InterfazG
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LOGIN());
+            Application.Run(new Clientes());
         }
     }
 }

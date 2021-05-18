@@ -61,7 +61,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWkAAABRCAYAAAAQJVc6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAFStJREFUeF7tnQ/ELdUah3MlSZIkSZLkSpIrOZIjR3IkSZIkSXIlSa4kSSJXklxJ
+        vAAADrwBlbxySQAAFStJREFUeF7tnQ/ELdUah3MlSZIkSZLkSpIrOZIjR3IkSZIkSXIlSa4kSSJXklxJ
         ciVXriQ5kiRJkiRJjiRJcuRKkiRJkqT7e/aZtb17fWvNXvN/vvneh589e/aembVm1nrnXf+PcRzHcRzH
         cRzHcRzHccbmHOkm6THpJemw9D/pe+kX6Q/pN+ln6VvpC+ld6UXpcekf0nXSBdLxkrNMSBfXH93c9Rwr
         fSY9IpH+nWE5WbpR+rf0kYR9wZ78Lv0kfS4dkm6VTpP2PCTQK6X/SN9Jf/YoDPrX0gcSNx0jfoK0DcLz
@@ -154,7 +154,7 @@
         KJSZNjKc4ziOMyPcSDuO4ziO4ziO4ziO4ziOMxjHHPN/Ohsgyb+QjXYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnAgregar.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnEditar.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QURARMfRz25SwAAALFJREFU

@@ -33,7 +33,7 @@ namespace InterfazG
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,25 +77,26 @@ namespace InterfazG
             this.dataGridView1.Location = new System.Drawing.Point(21, 90);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(664, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(645, 365);
             this.dataGridView1.TabIndex = 6;
             // 
-            // btnAgregar
+            // btnEditar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(69)))), ((int)(((byte)(54)))));
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(21, 482);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(140, 48);
-            this.btnAgregar.TabIndex = 14;
-            this.btnAgregar.Text = "      AGREGAR";
-            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(69)))), ((int)(((byte)(54)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(21, 482);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(140, 48);
+            this.btnEditar.TabIndex = 14;
+            this.btnEditar.Text = "      EDITAR\r\n";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtNombre
             // 
@@ -204,11 +205,11 @@ namespace InterfazG
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(821, 408);
+            this.btnGuardar.Location = new System.Drawing.Point(715, 472);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(194, 61);
+            this.btnGuardar.Size = new System.Drawing.Size(300, 58);
             this.btnGuardar.TabIndex = 28;
-            this.btnGuardar.Text = "      AGREGAR";
+            this.btnGuardar.Text = "      GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -229,7 +230,7 @@ namespace InterfazG
             this.Controls.Add(this.txtNIT);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
@@ -248,7 +249,7 @@ namespace InterfazG
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;

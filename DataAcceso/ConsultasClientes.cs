@@ -21,17 +21,41 @@ namespace DataAcceso
             //Transaccion SQL
 
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "Select * from Clientes";
+            comando.CommandText = "MostrarClientes";
+            comando.CommandType = CommandType.StoredProcedure;
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conexion.CerrarConexion();
             return tabla;
         }
-        public void Insertar(string nom, string nit, string dir, string ciu, double tel)
+        public void Insertar(string nombre, string nit, string direccion, string ciudad, string telefono)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into Clientes values ('"+nom+"', '"+nit+"', '"+dir+"', '"+ciu+"', '"+tel+"')";
+            comando.CommandText = "InsertarClientes";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@nit", nit);
+            comando.Parameters.AddWithValue("@direccion ", direccion);
+            comando.Parameters.AddWithValue("@ciudad", ciudad);
+            comando.Parameters.AddWithValue("@telefono", telefono);
             comando.ExecuteNonQuery();
+            
         }
+        public void Editar(string nombre, string nit, string direccion, string ciudad, string telefono, int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "EditarClientes";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@nit", nit);
+            comando.Parameters.AddWithValue("@direccion ", direccion);
+            comando.Parameters.AddWithValue("@ciudad", ciudad);
+            comando.Parameters.AddWithValue("@telefono", telefono);
+            comando.Parameters.AddWithValue("@id", id);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+        }
+        
     }
 }
