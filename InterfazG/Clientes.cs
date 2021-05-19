@@ -63,6 +63,7 @@ namespace InterfazG
                     objetoD.EditarClie(txtNombre.Text, txtNIT.Text, txtDireccion.Text, txtCiudad.Text, txtTelefono.Text, idCliente);
                     MessageBox.Show("se edito correctamente");
                     MostrarClientes();
+                    limpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
@@ -83,6 +84,28 @@ namespace InterfazG
                 txtCiudad.Text = dataGridView1.CurrentRow.Cells["ciudad"].Value.ToString();
                 txtTelefono.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
                 idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
+        }
+        private void limpiarForm()
+        {
+            txtDireccion.Clear();
+            txtNIT.Clear();
+            txtNombre.Clear();
+            txtCiudad.Clear();
+            txtTelefono.Clear();
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                idCliente = dataGridView1.CurrentRow.Cells["Id"].Value.ToString();
+                objetoD.EliminarClie(idCliente);
+                MessageBox.Show("Eliminado correctamente");
+
             }
             else
                 MessageBox.Show("seleccione una fila por favor");

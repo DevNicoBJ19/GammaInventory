@@ -30,6 +30,7 @@ namespace DataAcceso
         }
         public void Insertar(string nombre, string nit, string direccion, string ciudad, string telefono)
         {
+           
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "InsertarClientes";
             comando.CommandType = CommandType.StoredProcedure;
@@ -39,10 +40,13 @@ namespace DataAcceso
             comando.Parameters.AddWithValue("@ciudad", ciudad);
             comando.Parameters.AddWithValue("@telefono", telefono);
             comando.ExecuteNonQuery();
+            //limpio parametros al comenzar otra consulta, asi no salta error
+            comando.Parameters.Clear();
             
         }
         public void Editar(string nombre, string nit, string direccion, string ciudad, string telefono, int id)
         {
+            
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "EditarClientes";
             comando.CommandType = CommandType.StoredProcedure;
@@ -55,6 +59,16 @@ namespace DataAcceso
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
+        }
+        public void Eliminar (int id)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "EliminarCliente";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.AddWithValue("@idcli", id);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+
         }
         
     }

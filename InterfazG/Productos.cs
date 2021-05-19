@@ -74,5 +74,7 @@ namespace InterfazG
             ClsProductos objPro = new ClsProductos();
             dataGridView1.DataSource = objPro.ListarProductos();
         }
+
+        
     }
 }

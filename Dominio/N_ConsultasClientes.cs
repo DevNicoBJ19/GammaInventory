@@ -28,6 +28,10 @@ namespace Dominio
         {
             objetoDA.Editar(nombre, nit, direccion, ciudad, telefono, Convert.ToInt32(id));
         }
+        public void EliminarClie(string id)
+        {
+            objetoDA.Eliminar(Convert.ToInt32(id));
+        }
 
     }
     }
