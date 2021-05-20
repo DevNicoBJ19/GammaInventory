@@ -42,6 +42,7 @@ namespace InterfazG
             this.lblprecio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,19 +63,17 @@ namespace InterfazG
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(84, 103);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(669, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 288);
             this.dataGridView1.TabIndex = 8;
             // 
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(806, 90);
+            this.cmbCategoria.Location = new System.Drawing.Point(806, 103);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(221, 36);
             this.cmbCategoria.TabIndex = 9;
@@ -83,7 +82,7 @@ namespace InterfazG
             // cmbMarca
             // 
             this.cmbMarca.FormattingEnabled = true;
-            this.cmbMarca.Location = new System.Drawing.Point(806, 176);
+            this.cmbMarca.Location = new System.Drawing.Point(806, 189);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(221, 36);
             this.cmbMarca.TabIndex = 10;
@@ -92,7 +91,7 @@ namespace InterfazG
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(715, 90);
+            this.label2.Location = new System.Drawing.Point(706, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 19);
             this.label2.TabIndex = 11;
@@ -108,24 +107,24 @@ namespace InterfazG
             this.btnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(706, 527);
+            this.btnAgregar.Location = new System.Drawing.Point(744, 480);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(309, 50);
+            this.btnAgregar.Size = new System.Drawing.Size(266, 50);
             this.btnAgregar.TabIndex = 13;
-            this.btnAgregar.Text = "    AGREGAR";
+            this.btnAgregar.Text = "    GUARDAR";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(806, 263);
+            this.txtdescripcion.Location = new System.Drawing.Point(806, 276);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(221, 34);
             this.txtdescripcion.TabIndex = 14;
             // 
             // txtprecio
             // 
-            this.txtprecio.Location = new System.Drawing.Point(806, 349);
+            this.txtprecio.Location = new System.Drawing.Point(806, 362);
             this.txtprecio.Name = "txtprecio";
             this.txtprecio.Size = new System.Drawing.Size(221, 34);
             this.txtprecio.TabIndex = 15;
@@ -134,7 +133,7 @@ namespace InterfazG
             // 
             this.lbldescripcion.AutoSize = true;
             this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbldescripcion.Location = new System.Drawing.Point(715, 263);
+            this.lbldescripcion.Location = new System.Drawing.Point(706, 276);
             this.lbldescripcion.Name = "lbldescripcion";
             this.lbldescripcion.Size = new System.Drawing.Size(89, 19);
             this.lbldescripcion.TabIndex = 16;
@@ -144,7 +143,7 @@ namespace InterfazG
             // 
             this.lblprecio.AutoSize = true;
             this.lblprecio.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblprecio.Location = new System.Drawing.Point(719, 349);
+            this.lblprecio.Location = new System.Drawing.Point(706, 362);
             this.lblprecio.Name = "lblprecio";
             this.lblprecio.Size = new System.Drawing.Size(51, 19);
             this.lblprecio.TabIndex = 17;
@@ -163,17 +162,36 @@ namespace InterfazG
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(715, 176);
+            this.label1.Location = new System.Drawing.Point(706, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 19);
             this.label1.TabIndex = 19;
             this.label1.Text = "Marca";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(69)))), ((int)(((byte)(54)))));
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(65)))), ((int)(((byte)(68)))));
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(94, 470);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(171, 50);
+            this.btnEditar.TabIndex = 20;
+            this.btnEditar.Text = "    EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1039, 600);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblprecio);
@@ -211,5 +229,6 @@ namespace InterfazG
         private System.Windows.Forms.Label lblprecio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

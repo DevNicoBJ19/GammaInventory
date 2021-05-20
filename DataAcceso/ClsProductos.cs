@@ -16,6 +16,7 @@ namespace DataAcceso
         //metodo para leer filas de la base de datos
         private SqlDataReader LeerFilas;
         //Listar categorias es un codigo de consulta
+        string idprod;
         public DataTable ListarCategorias()
         {
             DataTable Tabla = new DataTable();
@@ -64,6 +65,14 @@ namespace DataAcceso
             LeerFilas.Close();
             Conexion.CerrarConexion();
             return Tabla;
+        }
+        public void EditarProductos(int idCategoria, int idMarca, int v, string descripcion, double precio)
+        {
+            Comando.Connection = Conexion.AbrirConexion();
+            Comando.CommandText = "update PRODUCTOS set IDCATEGORIA=" + idCategoria + ",IDMARCA=" + idMarca + ",DESCRIPCION='" + descripcion + "',PRECIO=" + precio + " WHERE IDPROD=" + idprod;
+            Comando.CommandType = CommandType.Text;
+            
+            Conexion.CerrarConexion();
         }
     }
 }

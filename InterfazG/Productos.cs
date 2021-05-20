@@ -17,6 +17,8 @@ namespace InterfazG
     {
 
         ClsProductos objProducto = new ClsProductos();
+        string Operacion = "Insertar";
+        string idprod;
 
         public Productos()
         {
@@ -58,16 +60,38 @@ namespace InterfazG
         {
 
         }
+        private void LimpiarFormulario()
+        {
+            txtdescripcion.Clear();
+            txtprecio.Clear();
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            objProducto.InsertarProductos(
+            if(Operacion =="Insertar")
+            {
+
+                objProducto.InsertarProductos(
                 Convert.ToInt32(cmbCategoria.SelectedValue),
                 Convert.ToInt32(cmbMarca.SelectedValue),
                 txtdescripcion.Text,
                 Convert.ToDouble(txtprecio.Text));
             MessageBox.Show("Dato almacenado correctamente");
-            ListarProductos();
+            
+        }
+            else if (Operacion == "Editar")
+            {
+                objProducto.EditarProductos(Convert.ToInt32(idprod) ,
+                    Convert.ToInt32(cmbCategoria.SelectedValue),
+                    Convert.ToInt32(cmbMarca.SelectedValue),
+                    txtdescripcion.Text,
+                    Convert.ToDouble(txtprecio.Text));
+                    Operacion = "Insertar";
+                MessageBox.Show("Se edito correctamente");
+            }
+                ListarProductos();
+                LimpiarFormulario();
+            
         }
         private void ListarProductos()
         {
@@ -75,6 +99,19 @@ namespace InterfazG
             dataGridView1.DataSource = objPro.ListarProductos();
         }
 
-        
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                Operacion = "Editar";
+                cmbCategoria.Text = dataGridView1.CurrentRow.Cells["CATEGORIA"].Value.ToString();
+                cmbMarca.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtdescripcion.Text = dataGridView1.CurrentRow.Cells["DESCRIPCION"].Value.ToString();
+                txtprecio.Text = dataGridView1.CurrentRow.Cells["PRECIO"].Value.ToString();
+                idprod = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+            }
+            else
+                MessageBox.Show("Debe seleccionar una fila");
+        }
     }
 }

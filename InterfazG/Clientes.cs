@@ -14,6 +14,8 @@ namespace InterfazG
         N_ConsultasClientes objetoD = new N_ConsultasClientes();
         private string idCliente = null;
         private bool Editar = false;
+        
+        
 
         public Clientes()
         {
@@ -30,6 +32,7 @@ namespace InterfazG
            //de las tablas al añadir un dato nuevo, y no la muestre dos veces
             N_ConsultasClientes objeto = new N_ConsultasClientes();
             dataGridView1.DataSource = objeto.MostrarClie();
+            
 
         }
 
@@ -110,7 +113,13 @@ namespace InterfazG
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.AutoResizeColumns(DataGridViewAutoSizeColumnsMo‌​de.Fill);
+        }
     }
-    }
+}
+
 
 

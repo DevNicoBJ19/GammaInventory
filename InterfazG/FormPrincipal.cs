@@ -84,12 +84,6 @@ namespace InterfazG
         {
             AbrirFormEnPanel(new Clientes());
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel(new Proveedores());
-        }
-
         private void MenuVertical_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();

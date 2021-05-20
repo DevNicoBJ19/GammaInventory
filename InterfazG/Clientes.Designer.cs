@@ -73,14 +73,19 @@ namespace InterfazG
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(69, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(669, 437);
+            this.dataGridView1.Size = new System.Drawing.Size(477, 288);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEditar
             // 
@@ -92,7 +97,7 @@ namespace InterfazG
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(21, 531);
+            this.btnEditar.Location = new System.Drawing.Point(97, 494);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(211, 48);
             this.btnEditar.TabIndex = 14;
@@ -102,7 +107,7 @@ namespace InterfazG
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(821, 105);
+            this.txtNombre.Location = new System.Drawing.Point(821, 122);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(193, 23);
             this.txtNombre.TabIndex = 15;
@@ -111,7 +116,7 @@ namespace InterfazG
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(697, 105);
+            this.label1.Location = new System.Drawing.Point(693, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 17;
@@ -121,7 +126,7 @@ namespace InterfazG
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(697, 179);
+            this.label3.Location = new System.Drawing.Point(697, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 17);
             this.label3.TabIndex = 19;
@@ -129,7 +134,7 @@ namespace InterfazG
             // 
             // txtNIT
             // 
-            this.txtNIT.Location = new System.Drawing.Point(821, 177);
+            this.txtNIT.Location = new System.Drawing.Point(820, 183);
             this.txtNIT.Name = "txtNIT";
             this.txtNIT.Size = new System.Drawing.Size(194, 23);
             this.txtNIT.TabIndex = 18;
@@ -138,7 +143,7 @@ namespace InterfazG
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(697, 250);
+            this.label4.Location = new System.Drawing.Point(697, 256);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 21;
@@ -146,7 +151,7 @@ namespace InterfazG
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(821, 250);
+            this.txtDireccion.Location = new System.Drawing.Point(821, 256);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(194, 23);
             this.txtDireccion.TabIndex = 20;
@@ -155,7 +160,7 @@ namespace InterfazG
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(697, 319);
+            this.label5.Location = new System.Drawing.Point(697, 325);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 17);
             this.label5.TabIndex = 23;
@@ -163,7 +168,7 @@ namespace InterfazG
             // 
             // txtCiudad
             // 
-            this.txtCiudad.Location = new System.Drawing.Point(821, 319);
+            this.txtCiudad.Location = new System.Drawing.Point(821, 325);
             this.txtCiudad.Name = "txtCiudad";
             this.txtCiudad.Size = new System.Drawing.Size(194, 23);
             this.txtCiudad.TabIndex = 22;
@@ -180,7 +185,7 @@ namespace InterfazG
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(821, 393);
+            this.txtTelefono.Location = new System.Drawing.Point(820, 393);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(194, 23);
             this.txtTelefono.TabIndex = 24;
@@ -195,7 +200,7 @@ namespace InterfazG
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(248, 531);
+            this.btnEliminar.Location = new System.Drawing.Point(362, 494);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(228, 48);
             this.btnEliminar.TabIndex = 26;
@@ -213,7 +218,7 @@ namespace InterfazG
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(706, 529);
+            this.btnGuardar.Location = new System.Drawing.Point(705, 494);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(309, 50);
             this.btnGuardar.TabIndex = 28;
